@@ -6,7 +6,7 @@ header.addEventListener("click", () => {
 });
 
 async function getComment() {
-  const response = await fetch("https://comseba.onrender.com/comment");
+  const response = await fetch("https://comseba-0pla.onrender.com/comment");
   const jsonData = await response.json();
 
   return jsonData;
@@ -14,7 +14,7 @@ async function getComment() {
 
 const postComment = async (param) => {
   console.log(param);
-  const res = await fetch("https://comseba.onrender.com/createcomment", {
+  const res = await fetch("https://comseba-0pla.onrender.com/createcomment", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
