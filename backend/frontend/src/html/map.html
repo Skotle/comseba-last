@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/css/map.css"/>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=49d739c735efa166211ac8f1cbc58949"></script>
+</head>
+<body>
+    <div class="map-page">
+        <header class="map__header">
+            <img src="/img/logo.png" href="/" alt="로고"/>
+            <div class="map__header__right">
+                <a href="/map">오시는 길</a>
+                <a href="guest">방명록</a>
+            </div>
+        </header>
+    </div>
+    <div class="map__body">
+        <div id="map" class="map__body__left">지도</div>
+            <script>
+                var container = document.getElementById('map');
+                var options = {
+                    center: new kakao.maps.LatLng(37.407565, 126.670360),
+                    level: 3
+                };
+        
+                var map = new kakao.maps.Map(container, options);
+            </script>
+        <div class="map__body__right">
+            <p>INCHEON COMSEBA</p>
+            <p>컴세바 써니랩학원인천지점</p>
+            <p>인천 연수구 먼우금로 92</p>
+            <p>CALL : 032-822-4300</p>
+        </div>
+    </div>
+    
+</body>
+</html>
