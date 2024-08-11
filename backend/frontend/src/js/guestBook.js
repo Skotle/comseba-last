@@ -1,5 +1,5 @@
 async function getComment() {
-  const response = await fetch("https://comseba-0pla.onrender.com/comment");
+  const response = await fetch("https://comseba-0pla.onrender.com/guest");
   const jsonData = await response.json();
 
   return jsonData;
