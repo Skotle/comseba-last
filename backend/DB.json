@@ -1,12 +1,1 @@
-{
-    "commentList":[
-        {
-            "name":"James",
-            "comment":"Hello,"
-        },
-        {
-            "name":"Donald",
-            "comment":"It's excited."
-        }
-    ]
-}
+{"commentList":[null]}
