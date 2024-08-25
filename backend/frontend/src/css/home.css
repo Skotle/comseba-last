@@ -12,7 +12,7 @@
   justify-content: space-between; 
 }
 
-.home__header img {
+.home__header .img {
   cursor: pointer;
 }
 
