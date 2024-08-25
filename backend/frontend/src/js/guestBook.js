@@ -43,7 +43,7 @@ const elapsedTime = (start, end) => {
 const makeComment = async () => {
   const db = await getComment();
 
-  const commentArea = document.querySelector(".guest_comment-area");
+  const commentArea = document.querySelector(".guest__comment-area");
 
   const htmlList = db.commentList.map((info) => {
     const date = info.time.split("-");
@@ -53,14 +53,14 @@ const makeComment = async () => {
 
     const timeStr = elapsedTime(time, curTime);
     console.log(time);
-    return `<div class="guest_comment">
-    <div class="guest_comment_left">
-      <div class="guest_comment_left_name">${info.name}</div>
+    return `<div class="guest__comment">
+    <div class="guest_comment__left">
+      <div class="guest__comment__left__name">${info.name}</div>
     </div>
-    <div class="guest_comment_right">
-      <div class="guest_comment_right_text">${info.comment}
+    <div class="guest__comment__right">
+      <div class="guest__comment__right_text">${info.comment}
       </div>
-      <div class="guest_comment_right_time">${timeStr}</div>
+      <div class="guest__comment__right__time">${timeStr}</div>
     </div>
   </div>`;
   });
