@@ -72,11 +72,11 @@ const makeComment = async () => {
 
 makeComment();
 
-const commentBtn = document.querySelector(".guest_form button");
+const commentBtn = document.querySelector(".guest__form button");
 commentBtn.addEventListener("click", async (e) => {
   e.preventDefault();
-  const name = document.querySelector(".guest_form input");
-  const comment = document.querySelector(".guest_form textarea");
+  const name = document.querySelector(".guest__form input");
+  const comment = document.querySelector(".guest__form textarea");
   console.log(name, comment);
   const time = new Date();
   const timeStr = `${time.getFullYear()}-${
