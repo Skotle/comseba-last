@@ -4,7 +4,7 @@ import fs from 'fs';
 const __dirname = path.resolve();
 const app = express();
 
-app.use(express.static("frontend"));
+app.use(express.static("frontend")); ///243 sec
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
@@ -23,15 +23,17 @@ app.get("/comment",(req,res)=>{
     res.json(db);
 });
 
-app.post("createcomment",(req,res)=>{
+app.post("/createcomment",(res,res)=>{ ///243 thr
     const data = req.body;
-    console.log(data);
-    const db = JSON.parse(fs.readFileSync("DB.json"));
+    console.log(data)
+    res.json(data);
+    const db = JSON.parse(fs.readFileSync(DB.json));
+    db.commentList.unshift(data);
+    fs.writeFileSync("DB.json",JSON.stringify(db));
     res.json(data);
 
-})
+});
 
-app.use(express.static("frontend"));
 app.listen(port, () => {
     console.log(`Listening to server on http://localhost:${port}`);
 });
