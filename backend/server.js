@@ -27,9 +27,10 @@ app.post("/createcomment",(req,res)=>{ ///243 thr
     const data = req.body;
     console.log(data)
     res.json(data);
-    const db = JSON.parse(fs.readFileSync(DB.json));
+    const db = JSON.parse(fs.readFileSync("DB.json"));
     db.commentList.unshift(data);
     fs.writeFileSync("DB.json",JSON.stringify(db));
+    
     res.json(data);
 });
 
