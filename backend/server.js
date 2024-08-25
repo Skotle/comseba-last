@@ -23,7 +23,7 @@ app.get("/comment",(req,res)=>{
     res.json(db);
 });
 
-app.post("/createcomment",(res,res)=>{ ///243 thr
+app.post("/createcomment",(req,res)=>{ ///243 thr
     const data = req.body;
     console.log(data)
     res.json(data);
@@ -31,7 +31,6 @@ app.post("/createcomment",(res,res)=>{ ///243 thr
     db.commentList.unshift(data);
     fs.writeFileSync("DB.json",JSON.stringify(db));
     res.json(data);
-
 });
 
 app.listen(port, () => {
